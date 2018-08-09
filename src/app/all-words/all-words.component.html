@@ -1,0 +1,7 @@
+<mat-card *ngFor="let oneWord of allWords" class="word-container">
+  <input type="text" value="{{oneWord.wordObj.word}}" #norW>
+  <input type="text" value="{{oneWord.wordObj.translation}}" #engW>
+  <span class="spacer"></span>
+  <button class="btn-done" (click)="updateWord(oneWord.id, norW.value, engW.value)" mat-icon-button></button>
+  <button class="btn-dlt" (click)="deleteWord(oneWord.id)" mat-icon-button></button>
+</mat-card>

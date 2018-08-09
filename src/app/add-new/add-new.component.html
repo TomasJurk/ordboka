@@ -1,0 +1,12 @@
+<main>
+  <mat-card class="form-container">
+    <h1>Type new word</h1>
+    <mat-form-field class="full-width">
+      <input [(ngModel)]="word" placeholder="Enter word" type="text" matInput>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input [(ngModel)]="translation" placeholder="Enter translation" type="text" matInput>
+    </mat-form-field>
+    <button (click)="setNewWord()" mat-button>ADD</button>
+  </mat-card>
+</main>
