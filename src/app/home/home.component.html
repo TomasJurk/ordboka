@@ -1,3 +1,22 @@
-<p>
-  home works!
-</p>
+<main>
+  <mat-card class="card-container">
+    <h1>Choose time</h1>
+    <mat-form-field class="full-width">
+      <input [(ngModel)]="time" placeholder="Enter time in minutes" type="number" matInput>
+    </mat-form-field>
+    <div class="buttons-container">
+      <button (click)="initTimer()" mat-button>Start</button>
+      <span class="spacer"></span>
+      <button (click)="stopTimer()" mat-button>Stop</button>
+    </div>
+  </mat-card>
+  <mat-card *ngIf="correctAnswer === 'correct'" class="card-container correct">
+    <h2>Correct!</h2>
+  </mat-card>
+  <mat-card *ngIf="correctAnswer === 'incorrect'" class="card-container incorrect">
+    <h2>Incorrect :( Learn more!</h2>
+  </mat-card>
+  <mat-card *ngIf="timerStopped" class="card-container">
+    <h2>App stopped</h2>
+  </mat-card>
+</main>
