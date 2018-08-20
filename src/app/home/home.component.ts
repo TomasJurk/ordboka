@@ -8,7 +8,7 @@ import { WordService } from '../word.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  time = 30;
+  time = 20;
   timerId: any;
   timerStopped: boolean;
 
