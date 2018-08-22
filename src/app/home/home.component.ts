@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.lastTwo.push(randomIndex);
       }
       const answer = prompt('Translate: '+ this.allWords[randomIndex].word);
-      if (answer == this.allWords[randomIndex].translation) {
+      if (answer.toLowerCase() == this.allWords[randomIndex].translation) {
         this.correctAnswer = 'correct';
       } else {
         this.correctAnswer = 'incorrect';
